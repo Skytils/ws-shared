@@ -21,4 +21,10 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-sealed interface Packet
+data class C2SPacketLogin(
+    val username: String,
+    val uuid: String,
+    val modVersion: String,
+    val wsVersion: Int,
+    val serverId: String
+) : Packet

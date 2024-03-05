@@ -16,11 +16,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package gg.skytils.skytilsws.shared.packet.s2c
+package gg.skytils.skytilsws.shared
 
 import gg.skytils.skytilsws.shared.packet.Packet
-import gg.skytils.skytilsws.shared.packet.PacketID
-import kotlinx.serialization.Serializable
+import io.ktor.websocket.*
 
-@Serializable
-data class S2CPacketAcknowledge(val apiVersion: Int) : Packet(PacketID.S2C_ACKNOWLEDGE)
+interface IPacketHandler {
+    suspend fun processPacket(session: WebSocketSession, packet: Packet)
+}

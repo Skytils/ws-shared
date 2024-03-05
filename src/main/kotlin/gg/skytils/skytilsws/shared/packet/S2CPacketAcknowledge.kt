@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-sealed interface Packet
+data class S2CPacketAcknowledge(val wsVersion: Int) : Packet

@@ -16,17 +16,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package gg.skytils.skytilsws.shared.packet.c2s
+package gg.skytils.skytilsws.shared
 
-import gg.skytils.skytilsws.shared.packet.Packet
-import gg.skytils.skytilsws.shared.packet.PacketID
-import kotlinx.serialization.Serializable
+import kotlinx.serialization.ExperimentalSerializationApi
+import kotlinx.serialization.protobuf.ProtoBuf
 
-@Serializable
-data class C2SPacketLogin(
-    val username: String,
-    val uuid: String,
-    val modVersion: String,
-    val apiVersion: Int,
-    val serverId: String
-) : Packet(PacketID.C2S_LOGIN)
+object SkytilsWS {
+    const val version = 1
+
+    @OptIn(ExperimentalSerializationApi::class)
+    val packetSerializer = ProtoBuf {
+        encodeDefaults = true
+    }
+}

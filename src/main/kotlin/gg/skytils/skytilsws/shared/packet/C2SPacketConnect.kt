@@ -16,11 +16,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package gg.skytils.skytilsws.shared.packet.c2s
+package gg.skytils.skytilsws.shared.packet
 
-import gg.skytils.skytilsws.shared.packet.Packet
-import gg.skytils.skytilsws.shared.packet.PacketID
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class C2SPacketConnect(val modVersion: String, val apiVersion: Int) : Packet(PacketID.C2S_CONNECT)
+data class C2SPacketConnect(val wsVersion: Int, val modVersion: String) : Packet
