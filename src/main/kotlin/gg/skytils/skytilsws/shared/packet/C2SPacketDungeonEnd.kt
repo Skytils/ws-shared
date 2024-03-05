@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.kotlinToolingVersion
-
 /*
  * Skytils - Hypixel Skyblock Quality of Life Mod
  * Copyright (C) 2020-2024 Skytils
@@ -17,24 +15,10 @@ import org.jetbrains.kotlin.gradle.plugin.kotlinToolingVersion
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-plugins {
-    kotlin("jvm") version "1.9.22"
-    kotlin("plugin.serialization") version "1.9.22"
-}
 
-group = "gg.skytils.skytilsws.shared"
-version = "1.0-SNAPSHOT"
+package gg.skytils.skytilsws.shared.packet
 
-repositories {
-    mavenCentral()
-}
+import kotlinx.serialization.Serializable
 
-dependencies {
-    implementation("io.ktor:ktor-websockets:2.3.10")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.6.3")
-}
-
-kotlin {
-    jvmToolchain(8)
-}
+@Serializable
+data class C2SPacketDungeonEnd(val serverId: String) : Packet
