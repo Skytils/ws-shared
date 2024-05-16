@@ -30,9 +30,9 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-websockets:2.3.10")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.6.3")
+    api("io.ktor:ktor-websockets:2.3.10")
+    api("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
+    api("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.6.3")
 }
 
 kotlin {
