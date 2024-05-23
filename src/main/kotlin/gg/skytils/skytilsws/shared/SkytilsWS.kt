@@ -22,7 +22,7 @@ import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.protobuf.ProtoBuf
 
 object SkytilsWS {
-    const val version = 1
+    const val version = 2
 
     @OptIn(ExperimentalSerializationApi::class)
     val packetSerializer = ProtoBuf {
