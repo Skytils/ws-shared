@@ -18,13 +18,11 @@
 
 package gg.skytils.skytilsws.shared.structs
 
-enum class CHWaypointType(val boundingBox: BoundingBox) {
-    LostPrecursorCity(BoundingBox(312.0..624.0, 0.0..256.0, 312.0..624.0)),
-    JungleTemple(BoundingBox(0.0..312.0, 0.0..256.0, 0.0..312.0)),
-    GoblinQueensDen(BoundingBox(0.0..312.0, 0.0..256.0, 312.0..624.0)),
-    MinesOfDivan(BoundingBox(312.0..624.0, 0.0..256.0, 0.0..312.0)),
-    KingYolkar(BoundingBox(0.0..312.0, 0.0..256.0, 312.0..624.0)),
-    KhazadDum(BoundingBox(0.0..624.0, 0.0..256.0, 0.0..624.0)),
-    FairyGrotto(BoundingBox(0.0..624.0, 0.0..256.0, 0.0..624.0)),
-    Corleone(BoundingBox(312.0..624.0, 0.0..256.0, 0.0..312.0))
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class BoundingBox(val xRange: ClosedFloatingPointRange<Double>, val yRange: ClosedFloatingPointRange<Double>, val zRange: ClosedFloatingPointRange<Double>) {
+    fun contains(x: Double, y: Double, z: Double): Boolean {
+        return x in xRange && y in yRange && z in zRange
+    }
 }
