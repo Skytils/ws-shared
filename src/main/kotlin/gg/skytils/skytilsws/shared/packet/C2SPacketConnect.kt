@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class C2SPacketConnect(val wsVersion: Int, val modVersion: String) : C2SPacket
+data class C2SPacketConnect(val wsVersion: Int, val modBrand: String, val modVersion: String) : C2SPacket

@@ -24,7 +24,8 @@ import kotlinx.serialization.Serializable
 data class C2SPacketLogin(
     val username: String,
     val uuid: String,
-    val modVersion: String,
     val wsVersion: Int,
+    val modBrand: String,
+    val modVersion: String,
     val serverId: String
 ) : C2SPacket
