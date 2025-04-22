@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class C2SPacketDungeonStart(val serverId: String, val floor: String, val members: Set<String>, val startTime: Long, val entranceLoc: Int) : Packet
+data class C2SPacketDungeonStart(val serverId: String, val floor: String, val members: Set<String>, val startTime: Long, val entranceLoc: Int) : C2SPacket

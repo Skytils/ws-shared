@@ -27,4 +27,4 @@ data class C2SPacketLogin(
     val modVersion: String,
     val wsVersion: Int,
     val serverId: String
-) : Packet
+) : C2SPacket

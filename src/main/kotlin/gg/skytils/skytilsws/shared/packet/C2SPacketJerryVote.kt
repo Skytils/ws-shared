@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class C2SPacketJerryVote(val mayor: String, val endTime: Long, val sentTime: Long) : Packet
+data class C2SPacketJerryVote(val mayor: String, val endTime: Long, val sentTime: Long) : C2SPacket

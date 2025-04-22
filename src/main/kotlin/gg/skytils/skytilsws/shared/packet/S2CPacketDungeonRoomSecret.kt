@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class S2CPacketDungeonRoomSecret(val serverId: String, val roomId: String, val secretCount: Int) : Packet
+data class S2CPacketDungeonRoomSecret(val serverId: String, val roomId: String, val secretCount: Int) : S2CPacket

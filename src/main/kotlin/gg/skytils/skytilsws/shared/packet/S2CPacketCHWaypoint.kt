@@ -22,4 +22,4 @@ import gg.skytils.skytilsws.shared.structs.CHWaypointType
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class S2CPacketCHWaypoint(val serverId: String, val serverTime: Long, val type: CHWaypointType, val x: Int, val y: Int, val z: Int) : Packet
+data class S2CPacketCHWaypoint(val serverId: String, val serverTime: Long, val type: CHWaypointType, val x: Int, val y: Int, val z: Int) : S2CPacket

@@ -22,3 +22,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 sealed interface Packet
+
+@Serializable
+sealed interface C2SPacket : Packet
+
+@Serializable
+sealed interface S2CPacket : Packet

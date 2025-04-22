@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class S2CPacketDungeonMimic(val serverId: String) : Packet
+data class S2CPacketDungeonMimic(val serverId: String) : S2CPacket

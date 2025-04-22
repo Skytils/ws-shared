@@ -21,4 +21,4 @@ package gg.skytils.skytilsws.shared.packet
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class S2CPacketJerryMayor(val mayor: String, val endTime: Long) : Packet
+data class S2CPacketJerryMayor(val mayor: String, val endTime: Long) : S2CPacket
